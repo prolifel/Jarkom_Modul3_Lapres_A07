@@ -27,7 +27,7 @@ Anri adalah seorang mahasiswa tingkat akhir yang sedang mengerjakan TA mengenai 
 
 yaitu untuk membuat topologi jaringan demi kelancaran TA-nya dengan kriteria sebagai berikut:
 
-![gambar soal]()
+![gambar soal](https://github.com/prolifel/Jarkom_Modul3_Lapres_A07/blob/main/img/1_1.jpg)
 
 ```
 # Switch
@@ -48,11 +48,11 @@ xterm -T GRESIK -e linux ubd0=GRESIK,jarkom umid=GRESIK eth0=daemon,,,switch1 me
 
 ```
 
-![nano_topo]()
+![nano_topo](https://github.com/prolifel/Jarkom_Modul3_Lapres_A07/blob/main/img/1_2.jpg)
 
 Berikut ini adalah setting Interfaces dari tiap UML (sebelum DHCP diaktifkan)
 
-![interfaces]()
+![interfaces](https://github.com/prolifel/Jarkom_Modul3_Lapres_A07/blob/main/img/1_3.jpg)
 
 ### 2
 
@@ -72,7 +72,7 @@ Langkah:
 #DHCPDv6_PID=/var/run/dhcpd6.pid
 ```
 
-![SS_TUBAN_DHCP_SERVER]()
+![SS_TUBAN_DHCP_SERVER](https://github.com/prolifel/Jarkom_Modul3_Lapres_A07/blob/main/img/2_1.jpg)
 
 3. `apt-get install isc-dhcp-relay` di Surabaya
 
@@ -82,7 +82,7 @@ Langkah:
 
 Berikut ini adalah screenshot konfigurasi DHCP Relay pada Surabaya
 
-![SS_RELAY_SBY]()
+![SS_RELAY_SBY](https://github.com/prolifel/Jarkom_Modul3_Lapres_A07/blob/main/img/2_2.jpg)
 
 6. Edit file `dhcpd.conf` dan delegasi subnet DMZ agar Relay bekerja
 
@@ -94,7 +94,7 @@ subnet 10.151.73.64 netmask 255.255.255.248 {
 
 7. Edit interface semua client dan ganti kata `statis` menjadi `DHCP` dengan melakukan comment pada line Address, Netmask, dan Gateway.
 
-![SS_UML_DHCP]()
+![SS_UML_DHCP](https://github.com/prolifel/Jarkom_Modul3_Lapres_A07/blob/main/img/2_3.jpg)
 
 8. `service interface restart` pada setiap client
 
@@ -150,7 +150,7 @@ max-lease-time 600;
 
 Berikut ini adalah screenshot konfigurasi DHCP Server hingga nomor 6
 
-![SS_DHCP_SERVER]()
+![SS_DHCP_SERVER](https://github.com/prolifel/Jarkom_Modul3_Lapres_A07/blob/main/img/6_1.jpg)
 
 
 ### 7
@@ -184,7 +184,7 @@ acl USERS proxy_auth REQUIRED
 
 Berikut ini adalah screenshot Login dari Proxy
 
-![LOGIN_PROXY]()
+![LOGIN_PROXY](https://github.com/prolifel/Jarkom_Modul3_Lapres_A07/blob/main/img/7_1.jpg)
 
 
 ### 8
@@ -219,7 +219,7 @@ http_access allow USERS BIMBINGAN2
 
 Berikut ini adalah screenshot dari konfigurasi acl di Mojokerto
 
-![SS_ACL]()
+![SS_ACL](https://github.com/prolifel/Jarkom_Modul3_Lapres_A07/blob/main/img/9_1.jpg)
 
 
 ### 10
@@ -234,9 +234,9 @@ deny_info http://monta.if.its.ac.id/ all
 http_access deny site all
 ```
 
-Berikut ini adalah Screenshot dari konfigurasi Squid hingga nomor 11
+Berikut ini adalah Screenshot dari konfigurasi Squid hingga nomor 10
 
-![SS_SQUID]()
+![SS_SQUID](https://github.com/prolifel/Jarkom_Modul3_Lapres_A07/blob/main/img/10_1.jpg)
 
 ### 11
 
@@ -254,7 +254,7 @@ Bu Meguri meminta Anri untuk mengubah error page default squid menjadi seperti b
 
 Berikut ini adalah screenshot error page apabila waktu akses user diluar jadwal acl
 
-![SS_ERROR]()
+![SS_ERROR](https://github.com/prolifel/Jarkom_Modul3_Lapres_A07/blob/main/img/11_1.jpg)
 
 
 ### 12
@@ -277,12 +277,12 @@ zone "janganlupa-ta.a07.pw" {
 
 4. Membuat file `janganlupa-ta.a07.pw`, dan setting konfigurasi sebagai berikut:
 
-![SS_JARKOM_JANGANLUPA_TA]()
+![SS_JARKOM_JANGANLUPA_TA](https://github.com/prolifel/Jarkom_Modul3_Lapres_A07/blob/main/img/12_1.jpg)
 
 5. Melakukan restart service bind9
 
 Berikut ini adalah screenshot setting proxy dan bukti berhasil:
 
-![SS_PROXY]()
+![SS_PROXY](https://github.com/prolifel/Jarkom_Modul3_Lapres_A07/blob/main/img/12_2.jpg)
 
-![SS_REDIRECT]()
+![SS_REDIRECT](https://github.com/prolifel/Jarkom_Modul3_Lapres_A07/blob/main/img/12_3.jpg)
